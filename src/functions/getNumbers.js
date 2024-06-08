@@ -11,7 +11,7 @@ const GetNumbers=async(req,res)=>{
     if(data.option==="lucky" && rand+rand2===7){
         amount=amount*5
     }
-    else if((data.option==="above" && rand+rand2>=7)||(data.option==="below" && rand+rand2<=7)){
+    else if((data.option==="above" && rand+rand2>7)||(data.option==="below" && rand+rand2<=7)){
         amount=amount*2
     }
     else{
