@@ -23,6 +23,6 @@ const GetNumbers=async(req,res)=>{
     res.status(200).send({gained:amount,amount:Totalamount,numbers:{first:rand,second:rand2}})
 }
 
-router.post('/numbers',GetNumbers)
+router.put('/numbers',GetNumbers)
 export {router as getNumbers}
 
