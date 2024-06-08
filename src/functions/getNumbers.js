@@ -8,13 +8,13 @@ const GetNumbers=async(req,res)=>{
     var rand=Math.ceil(Math.random()*6)
     var rand2=Math.ceil(Math.random()*6)
     if(data.option==="lucky" && rand+rand2===7){
-        amount=amount*5
+        amount=amount*4
     }
     else if((data.option==="above" && rand+rand2>=7)||(data.option==="below" && rand+rand2<=7)){
-        amount=amount*2
+        amount=amount*1
     }
     else{
-        amount=0
+        amount=amount*(-1)
     }
     var Totalamount=amount+data.points
     console.log(Totalamount)
