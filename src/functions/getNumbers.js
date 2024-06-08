@@ -18,7 +18,7 @@ const GetNumbers=async(req,res)=>{
     }
     var Totalamount=amount+data.points
     console.log(Totalamount)
-    await UserModel.updateOne({username:data.username,$set:{points:Totalamount}})
+    await UserModel.updateOne({username:data.username},{$set:{points:Totalamount}})
     res.status(200).send({gained:amount,amount:Totalamount,numbers:{first:rand,second:rand2}})
 }
 
